@@ -269,12 +269,12 @@ body {
 }
 
 .commentator-item {
-    background: linear-gradient(to bottom, #6B2024 0%, #EC2024 65%, #FFCDFF 100%);
-    border: 0.5vh solid #bcbec0;
+    background: #7c6f64;
+    border: 0.5vh solid #928474;
 }
 
 .commentator-mid-logo {
-    border: 0.5vh solid #bcbec0;
+    border: 0.5vh solid #928474;
 }
 
 .commentator-0 {
@@ -332,7 +332,7 @@ body {
     justify-content: center;
     
     border-radius: 1vh 1vh 4vh 4vh;
-    background: linear-gradient(to bottom, #231f20 0%, #414042 50%, #231f20 100%);
+    background: #7c6f64;
     
     
     margin-left: 2ch;

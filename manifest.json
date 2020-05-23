@@ -6,8 +6,5 @@
     }, {
         "name": "Commentary overlay",
         "url": "commentary/index.html"
-    }, {
-        "name": "Waiting",
-        "url": "waiting/index.html"
     }]
 }
