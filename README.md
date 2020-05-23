@@ -5,7 +5,7 @@
 Here is an example (the flag and the chat are on top of the overlay)
 
 ### How should I install it ?
-Just follow the guide in the install section of the [scoreman documentation](https://github.com/N0NamedGuy/scoreman/blob/master/docs/overlays.md)
+Just follow the guide in the install section of the [scoreman documentation](https://github.com/N0NamedGuy/scoreman/blob/master/docs/overlays.md).
 
 ### Hey, how could I create mine ?
-Fortunatly there is also a section about creating one in the [scoreman documentation](https://github.com/N0NamedGuy/scoreman/blob/master/docs/overlays.md)
+Fortunatly there is also a section about creating a overlay in the [scoreman documentation](https://github.com/N0NamedGuy/scoreman/blob/master/docs/overlays.md).
