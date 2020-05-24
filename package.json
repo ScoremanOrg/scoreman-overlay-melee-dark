@@ -4,5 +4,6 @@
   "description": "Overlay pack for Smash Bros Melee with a dark theme",
   "main": "manifest.json",
   "repository": "https://github.com/ananas-dev/scoreman-overlay-melee-dark",
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Ananas"
 }
