@@ -5,7 +5,8 @@
         el: '#scoreboard',
         data: function () {
             return {
-                scoreboard: {}
+                scoreboard: {},
+                baseUrl: null
             }
         },
         methods: {
@@ -13,12 +14,27 @@
             getCharacterUrl: getCharacterUrl,
             getCharacterColorStyle: getCharacterColorStyle
         },
-        mounted: onMounted
+        mounted: onMounted,
     })
 
     function onMounted() {
         var vm = this;
-        getScoreboard(vm);
+        getBaseUrl(vm)
+            .then(() => getScoreboard(vm));
+    }
+
+    function getBaseUrl(vm) {
+        return fetch('../config.json')
+			.then(function (response) {
+				if (response.ok) {
+					return response.json();
+				} else {
+					console.error('There was an error while fetching the scoreboad. Server is down?');
+				}
+			})
+            .then((config) => {
+                vm.baseUrl = config.baseUrl;
+            })
     }
 
 	function isFilled(str) {
@@ -27,7 +43,7 @@
 
     function getCharacterUrl(character) {
         var vm = this;
-        return `/static/characters/${vm.scoreboard.game.id}/${character.id}.png`;
+        return `${vm.baseUrl}/static/characters/${vm.scoreboard.game.id}/${character.id}.png`;
     }
 
     function getCharacterColorStyle(character) {
@@ -40,7 +56,7 @@
     }
 
 	function getScoreboard(vm) {
-		return fetch('/api/scoreboard')
+		return fetch(`${vm.baseUrl}/api/scoreboard`)
 			.then(function (response) {
 				if (response.ok) {
 					return response.json();
@@ -55,5 +71,6 @@
 					getScoreboard(vm);
                 }, REFRESH_TIMEOUT);
 			});
-	}
+    }
+    
 }(Vue, window.fetch, window));
