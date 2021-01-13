@@ -6,5 +6,8 @@
     }, {
         "name": "Commentary overlay",
         "url": "commentary/index.html"
+    }, {
+        "name" : "In-game widescreen",
+        "url": "ingame-widescreen/index.html"
     }]
 }

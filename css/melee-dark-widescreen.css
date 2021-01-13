@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Din";
+    src: url("../fonts/din-medium.ttf") format("truetype");
+}
+
+body {
+    font-family: "Din", "Impact", "Arial", sans-serif;
+    font-size: 2.5vh;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.scoreboard {
+    height: 100vh;
+    display: flex;
+}
+
+.game {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vh 0;
+    width: 67vw;
+    position: relative;
+    /*! background: green; */
+}
+
+.entrants {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #fff;
+    justify-content: center;
+}
+
+.entrant {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.entrant-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    
+    font-size: 200%;
+    width: 6vh;
+    height: 6vh;
+    padding: 1vh;
+}
+
+.entrant-players {
+    display: flex;
+    flex-direction: column;
+}
+
+.entrant-player {
+    display: flex;
+    flex-direction: row;
+    
+    padding: 0.75vh;
+    min-width: 16vw;
+}
+
+.entrant-player-character {
+    border: none;
+    border-bottom: solid 0.75vh;
+    height: 1.5em;
+}
+
+.entrant-player-character img {
+    max-height: 1em;
+}
+
+.entrant-0 .entrant-score {
+    order: 1;
+}
+
+.entrant-0 .entrant-player {
+    justify-content: flex-end;
+}
+
+.entrant-player + .entrant-player {
+    margin-top: 0.5vh;
+}
+
+.entrant-player-item + .entrant-player-item {
+    margin-left: 1ch;
+}
+
+.entrant-0 .entrant-score {
+    margin-left: 1ch;
+    border-radius: 1vh 2vh 1vh 2vh; 
+    background: #181818;
+    border: 0.5vh solid #808080;
+}
+
+.bordered-r,
+.entrant-1 .entrant-score {
+    margin-right: 1ch;
+    border-radius: 2vh 1vh 2vh 1vh;
+    background: #DC143C;
+    border: 0.5vh solid #ffcccb;
+}
+
+.bordered-l,
+.entrant-0 .entrant-player {
+    border-radius: 1vh 3vh 1vh 3vh;
+    background: #181818;
+    border: 0.5vh solid #808080;
+    flex-direction: row;
+}
+
+.bordered-r,
+.entrant-1 .entrant-player {
+    border-radius: 3vh 1vh 3vh 1vh;
+    background: #DC143C;
+    border: 0.5vh solid #ffcccb;
+    flex-direction: row-reverse;
+}
+
+.entrant-0 {
+    margin-left: auto;
+
+}
+
+.entrant-1 {
+    order: 2;
+    margin-right: auto;
+}
+
+.top-left-corner-commentators {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align:left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.top-right-corner-event-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-size: 3vh;
+}
+
+.tournament-round-wrapper {
+    order: 1;
+    margin-left: 1ch;
+    margin-right: 1ch;
+    min-width: 12vw;
+    text-align: center;
+}
+
+.tournament-round {
+    padding: 1vh;
+    border-radius: 1vh 1vh 3vh 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color:#181818;
+}
+
+.gradient-player,
+.gradient-score,
+.gradient-round {
+    border: 0.5vh solid #ffffe0;
+    background: #FDDA24;
+}
+
+.game-footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    padding: 2vh;
+    width: 100%;
+}
+
+.game-footer-logo {
+    max-height: 2em;
+}
+
+/* Commentary overlay */
+.commentary-footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    width: 100vw;
+    padding: 2vh;
+}
+
+.commentators {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 2vh
+}
+
+.commentator {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentator-item {
+    background: #7c6f64;
+    border: 0.5vh solid #928474;
+}
+
+.commentator-mid-logo {
+    border: 0.5vh solid #928474;
+}
+
+.commentator-0 {
+    align-items: flex-end;
+}
+
+.commentator-0 .commentator-item {
+    text-align: right;
+}
+
+.commentator-1 .commentator-item {
+    text-align: left;
+}
+
+.commentator-0 .commentator-name {
+    border-radius: 1vh 3vh 1vh 3vh;
+}
+
+.commentator-0 .commentator-handle {
+    border-radius: 1vh 2vh 1vh 2vh;
+}
+
+.commentator-1 .commentator-name {
+    border-radius: 3vh 1vh 3vh 1vh;
+}
+
+.commentator-1 .commentator-handle {
+    border-radius: 2vh 1vh 2vh 1vh;
+}
+
+.commentator-name {
+    width: 20vw;
+}
+
+.commentator-handle {
+    width: 14vw;
+}
+
+.commentator-1 {
+    order: 2
+}
+
+.commentator-item {
+    padding: 1vh
+}
+
+.commentator-item + .commentator-item  {
+    margin-top: 1vh;
+}
+
+.commentator-mid-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 1vh 1vh 4vh 4vh;
+    background: #7c6f64;
+    
+    
+    margin-left: 2ch;
+    margin-right: 2ch;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    
+}
+
+.commentator-mid-logo img {
+    max-width: 10vw;
+}
+
+.commentators-1 .commentator {
+    flex-direction: row;
+}
+
+.commentators-1 .commentator-handle {
+    border-radius: 3vh 1vh 3vh 1vh;
+    width: 20vw;
+    text-align: left;
+}
+
+.commentators-1 .commentator-mid-logo {
+    height: 100%;
+}
