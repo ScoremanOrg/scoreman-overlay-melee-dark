@@ -15,6 +15,11 @@
 <body>
 	<div class="scoreboard" id="scoreboard">
         <div v-if="scoreboard" class="top-left-corner-commentators" v-if="scoreboard.commentators">
+
+            <span v-if="isFilled(scoreboard.streamer)">
+                <i class="fa fa-fw fa-twitch"></i>
+                {{ scoreboard.streamer }}
+            </span>
             <div v-for="commentator in scoreboard.commentators"
                 class="top-left-corner-commentator">
                 <span v-if="isFilled(commentator.handle)">
