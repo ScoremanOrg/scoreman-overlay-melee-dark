@@ -66,7 +66,11 @@ body {
     display: flex;
     flex-direction: row;
     
+    /* TODO: maybe condense this? */
     padding: 0.75vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
     min-width: 16vw;
 }
 
@@ -84,16 +88,17 @@ body {
     order: 1;
 }
 
-.entrant-0 .entrant-player {
-    justify-content: flex-end;
-}
-
 .entrant-player + .entrant-player {
     margin-top: 0.5vh;
 }
 
 .entrant-player-item + .entrant-player-item {
     margin-left: 1ch;
+}
+
+.entrant-player-name {
+    flex-grow: 1;
+    text-align: center;
 }
 
 .entrant-0 .entrant-score {
@@ -116,15 +121,14 @@ body {
     border-radius: 1vh 3vh 1vh 3vh;
     background: #181818;
     border: 0.5vh solid #808080;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
-
 .bordered-r,
 .entrant-1 .entrant-player {
     border-radius: 3vh 1vh 3vh 1vh;
     background: #DC143C;
     border: 0.5vh solid #ffcccb;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 .entrant-0 {
