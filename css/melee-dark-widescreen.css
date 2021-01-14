@@ -148,6 +148,8 @@ body {
     text-align:left;
     margin-left: 1rem;
     margin-top: 1rem;
+    text-shadow: white 1px 1px 1px;
+    color: #808080;
 }
 
 .top-right-corner-event-name {
@@ -158,6 +160,8 @@ body {
     margin-right: 1rem;
     margin-top: 1rem;
     font-size: 3vh;
+    text-shadow: white 1px 1px 1px;
+    color: #808080;
 }
 
 .tournament-round-wrapper {
