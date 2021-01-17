@@ -24,7 +24,7 @@
     }
 
     function getBaseUrl(vm) {
-        return fetch('../config.json')
+        return fetch('!serverconfig')
 			.then(function (response) {
 				if (response.ok) {
 					return response.json();
