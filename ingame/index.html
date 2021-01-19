@@ -66,8 +66,8 @@
             <div class="sidebar-box sidebar-logos">
             </div>
             
-            <div v-if="scoreboard" class="sidebar-commentators" v-if="scoreboard.commentators">
-                <div v-for="commentator in scoreboard.commentators"
+            <div class="sidebar-commentators" v-if="scoreboard && scoreboard.commentators">
+                <div v-for="commentator in enabledCommentatorsFilter(scoreboard.commentators)"
                     class="sidebar-commentator">
                     <span v-if="isFilled(commentator.handle)">
                         <i class="fa fa-fw fa-microphone"></i>

@@ -12,7 +12,8 @@
         methods: {
             isFilled: isFilled,
             getCharacterUrl: getCharacterUrl,
-            getCharacterColorStyle: getCharacterColorStyle
+            getCharacterColorStyle: getCharacterColorStyle,
+            enabledCommentatorsFilter: enabledCommentatorsFilter
         },
         mounted: onMounted,
     })
@@ -53,6 +54,16 @@
             return `border-color: ${character.color.hex}`;
         }
     
+    }
+
+    function enabledCommentatorsFilter(commentators) {
+        if (commentators) {
+            return commentators.filter(function (commentator) {
+                return commentator.enabled;
+            });
+        } else {
+            return [];
+        }
     }
 
 	function getScoreboard(vm) {

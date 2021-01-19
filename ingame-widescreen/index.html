@@ -20,7 +20,7 @@
                 <i class="fa fa-fw fa-twitch"></i>
                 {{ scoreboard.streamer }}
             </span>
-            <div v-for="commentator in scoreboard.commentators"
+            <div v-for="commentator in enabledCommentatorsFilter(scoreboard.commentators)"
                 class="top-left-corner-commentator">
                 <span v-if="isFilled(commentator.handle)">
                     <i class="fa fa-fw fa-microphone"></i>
